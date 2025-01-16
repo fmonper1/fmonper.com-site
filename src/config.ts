@@ -6,14 +6,14 @@ export const SITE: Site = {
   profile: "https://fmonper.com/",
   desc: "Im a software engineer that is passionate about technology and innovation.",
   title: "fmonper.com",
-  ogImage: "astropaper-og.jpg",
+  // ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
   postPerPage: 3,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: true,
   editPost: {
-    url: "https://github.com/satnaing/astro-paper/edit/main/src/content/blog",
+    url: "https://github.com/fmonper1/fmonper.com-site/edit/main/src/content/blog",
     text: "Suggest Changes",
     appendFilePath: true,
   },
