@@ -7,7 +7,7 @@ export default async (post: CollectionEntry<"blog">) => {
   return satori(
     <div
       style={{
-        background: "#fefbfb",
+        background: "#14213d",
         width: "100%",
         height: "100%",
         display: "flex",
@@ -15,7 +15,7 @@ export default async (post: CollectionEntry<"blog">) => {
         justifyContent: "center",
       }}
     >
-      <div
+      {/* <div
         style={{
           position: "absolute",
           top: "-1px",
@@ -30,11 +30,11 @@ export default async (post: CollectionEntry<"blog">) => {
           width: "88%",
           height: "80%",
         }}
-      />
+      /> */}
 
       <div
         style={{
-          border: "4px solid #000",
+          border: "4px solid #fca311",
           background: "#fefbfb",
           borderRadius: "4px",
           display: "flex",
