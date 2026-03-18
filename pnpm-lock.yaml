@@ -35,6 +35,9 @@ importers:
       remark-toc:
         specifier: ^9.0.0
         version: 9.0.0
+      reveal.js:
+        specifier: ^6.0.0
+        version: 6.0.0
       satori:
         specifier: ^0.12.1
         version: 0.12.1
@@ -2145,6 +2148,9 @@ packages:
   reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
+
+  reveal.js@6.0.0:
+    resolution: {integrity: sha512-RayDr1FL3Jglnf6p9xHGJ0U18va96PiuLs/JHnd1cdDOXvC+3lsXKe6ujl7PX0pvnhNW2Tpqnr6PEKpJVO2exw==}
 
   rollup@4.34.7:
     resolution: {integrity: sha512-8qhyN0oZ4x0H6wmBgfKxJtxM7qS98YJ0k0kNh5ECVtuchIJ7z9IVVvzpmtQyT10PXKMtBxYr1wQ5Apg8RS8kXQ==}
@@ -4938,6 +4944,8 @@ snapshots:
       unified: 11.0.5
 
   reusify@1.0.4: {}
+
+  reveal.js@6.0.0: {}
 
   rollup@4.34.7:
     dependencies:

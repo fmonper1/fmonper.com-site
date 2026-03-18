@@ -1,0 +1,110 @@
+---
+import SlideLayout from "@/layouts/SlideLayout.astro";
+import "@/styles/reveal-theme-fmonper.css";
+---
+
+<SlideLayout title="Demo Presentation">
+  <section>
+    <h1>reveal.js</h1>
+    <h3>The HTML Presentation Framework</h3>
+    <p>
+      <small>Powered by <a href="https://revealjs.com">reveal.js</a></small>
+    </p>
+  </section>
+
+  <section>
+    <h2>Slides</h2>
+    <p>
+      Not a coder? Not a problem. There's a fully-featured visual editor for
+      authoring these, try it out at <a href="https://slides.com">slides.com</a
+      >.
+    </p>
+  </section>
+
+  <section>
+    <section>
+      <h2>Vertical Slides</h2>
+      <p>Slides can be nested inside of each other.</p>
+      <p>Use the <em>Space</em> key to navigate through all slides.</p>
+      <br />
+      <a href="#/2/1" class="navigate-down">⬇</a>
+    </section>
+    <section>
+      <h2>Basement Level 1</h2>
+      <p>
+        Nested slides are useful for adding additional detail underneath a high
+        level horizontal slide.
+      </p>
+    </section>
+    <section>
+      <h2>Basement Level 2</h2>
+      <p>That's it, time to go back up.</p>
+      <br />
+      <a href="#/2">⬆</a>
+    </section>
+  </section>
+
+  <section>
+    <h2>Fragments</h2>
+    <p>Hit the next arrow...</p>
+    <p class="fragment">... to step through ...</p>
+    <p class="fragment">... a fragmented slide.</p>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Markdown Support
+
+      Write content using inline or external Markdown.
+
+      ```python
+      def greet(name):
+          return f"Hello, {name}!"
+      ```
+
+      Instructions and more info available in the [docs](https://revealjs.com/markdown/).
+    </script>
+  </section>
+
+  <section
+    data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)"
+  >
+    <h2>Custom Backgrounds</h2>
+    <p>
+      Slides can have different backgrounds — colors, gradients, images, or
+      videos.
+    </p>
+  </section>
+
+  <section data-transition="slide" data-background="#4d7e65">
+    <h2>Transition Styles</h2>
+    <p>
+      You can select from different transitions, like: <br />
+      <a href="?transition=none#/6">None</a> -
+      <a href="?transition=fade#/6">Fade</a> -
+      <a href="?transition=slide#/6">Slide</a> -
+      <a href="?transition=convex#/6">Convex</a> -
+      <a href="?transition=concave#/6">Concave</a> -
+      <a href="?transition=zoom#/6">Zoom</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Speaker Notes</h2>
+    <p>Press <strong>S</strong> to open the speaker view.</p>
+    <aside class="notes">
+      These are speaker notes. They are only visible in the speaker view.
+    </aside>
+  </section>
+
+  <section>
+    <h2>That's all!</h2>
+    <p>
+      Check out the <a href="https://revealjs.com">full docs</a> for more
+      features.
+    </p>
+    <p>
+      <a href="/">← Back to site</a>
+    </p>
+  </section>
+</SlideLayout>

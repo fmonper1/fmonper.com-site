@@ -1,0 +1,30 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import SlideLayout from "@/layouts/SlideLayout.astro";
+import "@/styles/reveal-theme-fmonper.css";
+
+export interface Props {
+  slide: CollectionEntry<"slides">;
+}
+
+export async function getStaticPaths() {
+  const slides = await getCollection("slides", ({ data }) => !data.draft);
+  return slides.map(slide => ({
+    params: { slug: slide.id },
+    props: { slide },
+  }));
+}
+
+const { slide } = Astro.props;
+---
+
+<SlideLayout title={slide.data.title} description={slide.data.description}>
+  <section
+    data-markdown
+    data-separator="^---$"
+    data-separator-vertical="^--$"
+    data-separator-notes="^Note:"
+  >
+    <script type="text/template" set:html={slide.body}></script>
+  </section>
+</SlideLayout>

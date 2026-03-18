@@ -1,0 +1,60 @@
+---
+import { SITE } from "@/config";
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = SITE.desc,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.url);
+---
+
+<!doctype html>
+<html lang={SITE.lang ?? "en"}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{title} | {SITE.title}</title>
+    <meta name="title" content={`${title} | ${SITE.title}`} />
+    <meta name="description" content={description} />
+    <meta name="author" content={SITE.author} />
+
+    <meta property="og:title" content={`${title} | ${SITE.title}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <slot />
+      </div>
+    </div>
+
+    <script>
+      import Reveal from "reveal.js";
+      import Highlight from "reveal.js/plugin/highlight";
+      import Markdown from "reveal.js/plugin/markdown";
+      import Notes from "reveal.js/plugin/notes";
+
+      import "reveal.js/reveal.css";
+      import "reveal.js/plugin/highlight/monokai.css";
+
+      const deck = new Reveal({
+        hash: true,
+        plugins: [Highlight, Markdown, Notes],
+      });
+      deck.initialize();
+    </script>
+
+    <slot name="head" />
+  </body>
+</html>
